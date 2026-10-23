@@ -1,0 +1,16 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.maxz.lanmessenger'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.maxz.lanmessenger'
+        minSdk 26
+        targetSdk 28
+        versionCode 1
+        versionName '0.1.0'
+    }
+}
