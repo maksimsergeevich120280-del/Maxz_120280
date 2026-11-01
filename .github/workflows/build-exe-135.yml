@@ -1,4 +1,4 @@
-name: Build Journal EXE 134
+name: Build Journal EXE 135
 
 on:
   workflow_dispatch:
@@ -23,12 +23,7 @@ jobs:
         shell: pwsh
         run: |
           $required = @('index.html','main.js','preload.js','package.json')
-          foreach ($file in $required) {
-            if (!(Test-Path $file)) {
-              Write-Error "Missing file: $file"
-              exit 1
-            }
-          }
+          foreach ($file in $required) { if (!(Test-Path $file)) { Write-Error "Missing file: $file"; exit 1 } }
 
       - name: Install dependencies
         run: npm install
@@ -39,6 +34,6 @@ jobs:
       - name: Upload installer
         uses: actions/upload-artifact@v4
         with:
-          name: Journal-134-Setup
-          path: dist/Journal-134-Setup.exe
+          name: Journal-135-Setup
+          path: dist/Journal-135-Setup.exe
           if-no-files-found: error
