@@ -1,4 +1,4 @@
-name: Build Journal EXE 136
+name: Build Journal EXE 137
 
 on:
   workflow_dispatch:
@@ -34,6 +34,6 @@ jobs:
       - name: Upload installer
         uses: actions/upload-artifact@v4
         with:
-          name: Journal-136-Setup
-          path: dist/Journal-136-Setup.exe
+          name: Journal-137-Setup
+          path: dist/Journal-137-Setup.exe
           if-no-files-found: error
