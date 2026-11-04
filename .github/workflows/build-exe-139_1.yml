@@ -36,4 +36,3 @@ jobs:
         with:
           name: Journal-139-Setup
           path: dist/Journal-139-Setup.exe
-          if-no-files-found: error
